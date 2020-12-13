@@ -1,0 +1,21 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Cone c = new Cone(10,20,2);
+		if(c.getTipo()==1) {
+			c.setPreco(238.90);
+		}else
+			if(c.getTipo()==2) {
+				c.setPreco(467.98);
+			}else
+				if(c.getTipo()==3) {
+					c.setPreco(758.34);
+				}else
+					System.out.println("Tipo inválido");
+		System.out.println(c);
+
+	}
+
+}
