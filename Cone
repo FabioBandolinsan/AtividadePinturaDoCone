@@ -1,0 +1,106 @@
+
+public class Cone {
+	private float Z;
+	private float R;
+	private int tipo;
+	private double preco;
+	
+	public Cone (float Z, float R, int tipo) {
+		setZ(Z);
+		setR(R);
+		setTipo(tipo);
+	}
+	
+	public float getZ() {
+		return Z;
+	}
+	public void setZ(float z) {
+		if(Z>=0)
+		Z = z;
+	}
+	public float getR() {
+		return R;
+	}
+	public void setR(float r) {
+		if(R>=0)
+		R = r;
+	}
+	public int getTipo() {
+		return tipo;
+	}
+	public void setTipo(int tipo) {
+		if(tipo==1) {
+		this.tipo = tipo;
+		}else
+			if(tipo==2) {
+			this.tipo =tipo;
+			}else
+				if(tipo==3) {
+					this.tipo=tipo;
+				}
+	}
+	
+	public double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+
+	}
+
+	public double areaB() {
+		return 3.14 *(R*R);
+	}
+	public double G() {
+		return Math.sqrt((Z*Z)+(R*R));
+	}
+	public double areaL() {
+		return 3.14*R*G();
+	}
+	public double areaT() {
+		return 3.14*R*(R+G());
+	}
+	public double litro() {
+		return areaT()* 3.45;
+	}
+	public int latas() {
+		if(litro()%18==0) {
+		return (int) (litro()/18);
+		}else
+			return (int) ((litro()/18)+1);
+	}
+	public double precoT() {
+		return latas()*preco;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Cone [Altura=");
+		builder.append(Z);
+		builder.append(", Raio=");
+		builder.append(R);
+		builder.append(", tipo de tinta=");
+		builder.append(tipo);
+		builder.append(", area da base=");
+		builder.append(areaB());
+		builder.append(", Geratriz=");
+		builder.append(G());
+		builder.append(", area do lado=");
+		builder.append(areaL());
+		builder.append(", area total=");
+		builder.append(areaT());
+		builder.append(", litro(s)=");
+		builder.append(litro());
+		builder.append(", lata(s)=");
+		builder.append(latas());
+		builder.append(", preco total=");
+		builder.append(precoT());
+		builder.append("]");
+		return builder.toString();
+	}
+
+
+	
+}
