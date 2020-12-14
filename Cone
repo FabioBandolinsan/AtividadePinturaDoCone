@@ -74,30 +74,40 @@ public class Cone {
 		return latas()*preco;
 	}
 
-	@Override
+@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Cone [Altura=");
-		builder.append(Z);
-		builder.append(", Raio=");
+		builder.append("-Cone");
+		builder.append("\n");
+		builder.append("Raio: ");
 		builder.append(R);
-		builder.append(", tipo de tinta=");
+		builder.append("\n");
+		builder.append("Altura: ");
+		builder.append(Z);
+		builder.append("\n");
+		builder.append("tipo de tinta: ");
 		builder.append(tipo);
-		builder.append(", area da base=");
-		builder.append(areaB());
-		builder.append(", Geratriz=");
+		builder.append("\n");
+		builder.append("Geratriz: ");
 		builder.append(G());
-		builder.append(", area do lado=");
+		builder.append("\n");
+		builder.append("Área do Fundo: ");
+		builder.append(areaB());
+		builder.append("\n");
+		builder.append("Área Lateral Cone: ");
 		builder.append(areaL());
-		builder.append(", area total=");
+		builder.append("\n");
+		builder.append("Área total: ");
 		builder.append(areaT());
-		builder.append(", litro(s)=");
+		builder.append("\n");
+		builder.append("Litros: ");
 		builder.append(litro());
-		builder.append(", lata(s)=");
+		builder.append("\n");
+		builder.append("Latas: ");
 		builder.append(latas());
-		builder.append(", preco total=");
+		builder.append("\n");
+		builder.append("Preco total: ");
 		builder.append(precoT());
-		builder.append("]");
 		return builder.toString();
 	}
 
